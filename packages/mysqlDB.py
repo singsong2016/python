@@ -34,7 +34,7 @@ def ExecuteSql(sql):
 
 # call demo 
    # install driver first =>  pip3 install PyMySQL
-    # from DB import GetData,ExecuteSql
+    # from mysqlDB import GetData,ExecuteSql
 
     # s='select * from hello'
 
