@@ -19,8 +19,8 @@ def sendmail(subject, content):
     # subject = 'mail from python redhat'
     message['Subject'] = Header(subject, 'utf-8')
     try:
-        smtpObj = smtplib.SMTP()
-        smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
+        smtpObj = smtplib.SMTP_SSL()      # smtplib.SMTP() 25 port server blocked  SSL 465 OK
+        smtpObj.connect(mail_host, 465)    
         smtpObj.login(mail_user, mail_pass)
         smtpObj.sendmail(sender, receivers, message.as_string())
         print('mail send successfully')
