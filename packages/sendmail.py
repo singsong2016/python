@@ -13,10 +13,6 @@ receivers = ['jdcmail@qq.com']  # 接收邮件，可设置为你的QQ邮箱或�
 def sendmail(subject, content):
     # 三个参数：第一个为文本内容，第二个 plain 设置文本格式，第三个 utf-8 设置编码
     message = MIMEText(content, 'plain', 'utf-8')
-    message['From'] = Header("Jsend", 'utf-8')     # 发送者
-    message['To'] = Header("Jreceive", 'utf-8')          # 接收者
-
-    # subject = 'mail from python redhat'
     message['Subject'] = Header(subject, 'utf-8')
     try:
         smtpObj = smtplib.SMTP_SSL()      # smtplib.SMTP() 25 port server blocked  SSL 465 OK
