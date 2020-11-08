@@ -1,6 +1,6 @@
 # recursion
 def recursive(n):
-    if n<2 and n>=0:
+    if n<=2 and n>=0:
         return 1
     else:
         b=recursive(n-1)+recursive(n-2)
